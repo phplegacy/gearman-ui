@@ -1,7 +1,7 @@
 # The list of servers to monitor.
 gearmanui.servers:
-    - name: "Localhost"
-      addr: "127.0.0.1:4730"
+    - name: "Gearman#1"
+      addr: "gearman:4730"
 
 # General settings.
 gearmanui.settings:

@@ -24,10 +24,33 @@ class GearmanFacadeProvider implements ServiceProviderInterface
 
         $app['gearman.serverInfo'] = $app->share(function() use ($app) {
             return new GearmanFacade(
-                $app['gearmanui.servers'],
+                $this->getServersConfig($app),
                 $app['gearman.manager'],
                 $app['monolog']);
         });
+    }
+
+    /**
+     * @param \GearmanUI\GearmanUIApplication $app
+     * @return array
+     */
+    private function getServersConfig($app)
+    {
+        $envServers = getenv('GEARMAN_SERVERS');
+        if (!$envServers) {
+            return $app['gearmanui.servers'];
+        }
+
+        $servers = [];
+        foreach (explode(',', $envServers) as $item) {
+            $exploded = explode(':', $item);
+            $servers[] = [
+                'name' => $exploded[0],
+                'addr' => $exploded[1] . ':' . $exploded[2],
+            ];
+        }
+
+       return $servers;
     }
 
     public function boot(Application $app) {}
