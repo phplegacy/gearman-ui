@@ -8,3 +8,4 @@ It is built on [Silex](http://silex.sensiolabs.org/) and [AngularJS](http://angu
 
 
 
+GEARMAN_SERVERS =  'Gearman#1:gearman:4730,Gearman#2:gearman2:4730';
