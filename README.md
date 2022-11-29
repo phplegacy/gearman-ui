@@ -1,11 +1,8 @@
-# Gearman UI [![Build Status](https://api.travis-ci.org/gaspaio/gearmanui.png?branch=master)](https://travis-ci.org/gaspaio/gearmanui)
+# Gearman UI
+![](docs/Screenshot_1.png)  
 
-**Gearman UI** is a PHP monitoring dashboard for [Gearman Job Servers](http://gearman.org).
+**Gearman UI** is a PHP monitoring dashboard for Gearman Job Servers.
 
-It is built on [Silex](http://silex.sensiolabs.org/) and [AngularJS](http://angularjs.org/) and aims to be a solid, extensible and fast way to visually follow the activity on your job queues.
+This repository was forked in order to maintain related repository [Gearman UI Docker](https://github.com/phplegacy/gearman-ui-docker).  
 
-**More information: [gaspaio.github.com/gearmanui](http://gaspaio.github.com/gearmanui)**
-
-
-
-GEARMAN_SERVERS =  'Gearman#1:gearman:4730,Gearman#2:gearman2:4730';
+> Original version: [github.com/gaspaio/gearmanui](https://github.com/gaspaio/gearmanui)
